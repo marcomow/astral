@@ -1,6 +1,6 @@
 /** Whether to enable debug logging. */
 export const DEBUG =
-  (Deno.permissions.querySync({ name: "env", variable: "DEBUG" }).state ===
+  (Deno.permissions.querySync?.({ name: "env", variable: "DEBUG" }).state ===
     "granted") && (!!Deno.env.get("DEBUG"));
 
 /** Attach a websocket to the console for debugging. */
